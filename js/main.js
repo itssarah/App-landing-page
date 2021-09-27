@@ -32,7 +32,7 @@ $(document).ready(function () {
   });
 
   /* features Carousel */
-  $(".features-carousel").owlCarousel({
+  /* $(".features-carousel").owlCarousel({
     loop: true,
     margin: 0,
     responsiveClass: true,
@@ -47,7 +47,7 @@ $(document).ready(function () {
         items: 3,
       },
     },
-  });
+  }); */
 
   /* guide Carousel */
   $(".screeshots-carousel").owlCarousel({
