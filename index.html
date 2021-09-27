@@ -1,512 +1,618 @@
 <!DOCTYPE html>
 <html lang="zxx">
+  <head>
+    <title>EyeSee</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- owl carousel css -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css" />
 
-<head>
-  <title>EyeSee</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- owl carousel css -->
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <!-- font awesome icons -->
-  <link rel="stylesheet" href="css/font-awesome.css">
-  <!-- bootstrap css -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <!-- main css -->
-  <link rel="stylesheet" href="css/style.css">
-
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-  <script>
-  function SubForm (){
-      $.ajax({
-          url:'https://api.apispreadsheets.com/data/18142/',
-          type:'post',
-          data:$("#myForm").serializeArray(),
-          success: function(){
-            alert("Form Data Submitted :)")
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function SubForm() {
+        $.ajax({
+          url: "https://api.apispreadsheets.com/data/18142/",
+          type: "post",
+          data: $("#myForm").serializeArray(),
+          success: function () {
+            alert("Form Data Submitted :)");
           },
-          error: function(){
-            alert("There was an error :(")
-          }
-      });
-  }
-  </script>
-</head>
+          error: function () {
+            alert("There was an error :(");
+          },
+        });
+      }
+    </script>
+  </head>
 
-<body class="dark">
-
-  <!-- Preloader start -->
-  <div class="preloader">
-    <span></span>
-  </div>
-  <!-- Preloader end -->
-
-
-  <!-- Navbar Start -->
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container-fluid">
-      <!-- Brand -->
-      <a class="navbar-brand" href="index.html">EyeSee</a>
-
-      <!-- Toggler/collapsibe Button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <i class="fas fa-bars"></i>
-      </button>
-
-      <!-- Navbar links -->
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link active" data-scroll-nav="0" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-scroll-nav="1" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-scroll-nav="2" href="#">Guide</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-scroll-nav="3" href="#">Installation</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-scroll-nav="4" href="#">Files Architecture</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-scroll-nav="5" href="#">Contact</a>
-          </li>
-
-        </ul>
-      </div>
+  <body class="dark">
+    <!-- Preloader start -->
+    <div class="preloader">
+      <span></span>
     </div>
-  </nav>
-  <!--Navbar End-->
+    <!-- Preloader end -->
 
-  <!-- Home Section Start-->
-  <section class="home d-flex align-items-center" id="home" data-scroll-index="0">
-    <div class="effect-wrap">
-      <i class="fas fa-plus effect effect-1"></i>
-      <i class="fas fa-plus effect effect-2"></i>
-      <i class="fas fa-circle-notch effect effect-3"></i>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html">EyeSee</a>
 
-    </div>
-    <div class="container-fluid">
-      <div class="row align-items-center">
-        <div class="col-lg-6 " id="welcome-text">
-          <div class="home-text ">
-            <h1>Best Abnormal Crowd Activities Behavior</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua</p>
-            <div class="home-btn">
-              <a href="" class="btn btn-1">Test Our system</a>
-              <button type="button"  class="btn btn-1 video-play-btn">
-                <i class="fas fa-play"></i>
-              </button>
+        <!-- Toggler/collapsibe Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapsibleNavbar"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
 
-            </div>
-          </div>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" data-scroll-nav="0" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-scroll-nav="1" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-scroll-nav="2" href="#">Guide</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-scroll-nav="3" href="#">Installation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-scroll-nav="4" href="#">Concept Map</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-scroll-nav="5" href="#">Contact</a>
+            </li>
+          </ul>
         </div>
-        <div class="col-lg-6 text-center " id="welcome-img">
-          <div class="home-img">
-            <div class="circle">
+      </div>
+    </nav>
+    <!--Navbar End-->
 
-            </div>
-            <img src="img/app-screenshots/15-01.svg" alt="eyesee app">
-          </div>
-        </div>
+    <!-- Home Section Start-->
+    <section
+      class="home d-flex align-items-center"
+      id="home"
+      data-scroll-index="0"
+    >
+      <div class="effect-wrap">
+        <i class="fas fa-plus effect effect-1"></i>
+        <i class="fas fa-plus effect effect-2"></i>
+        <i class="fas fa-circle-notch effect effect-3"></i>
       </div>
-    </div>
-  </section>
-  <!-- Home Section End-->
-
-  <!-- Feature Section Start -->
-  <section class="features section-padding" id="features" data-scroll-index="1">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 ">
-          <div class="section-title">
-            <h2>Awesome <span>features</span></h2>
-          </div>
-        </div>
-      </div>
-      <div class="row ">
-        <div class="owl-carousel features-carousel scroll-bottom" >
-          <div class="feature-item">
-            <div class="icon">
-              <i class="fas fa-diagnoses"></i>
-            </div>
-            <h3>Tracking pedestrians</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-          </div>
-          <div class="feature-item">
-            <div class="icon">
-              <i class="fas fa-wave-square"></i>
-            </div>
-            <h3>Abnormal activity</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-          </div>
-          <div class="feature-item">
-            <div class="icon">
-              <i class="fas fa-chart-bar"></i>
-            </div>
-            <h3>Statistics</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-          </div>
-          <div class="feature-item">
-            <div class="icon">
-              <i class="fas fa-check"></i>
-            </div>
-            <h3>fast load app</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Feature Section End -->
-
-  <!-- Fun fact section start-->
-  <section class="fun-facts section-padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6  d-flex align-items-center justify-content-center scroll-left">
-          <div class="fun-fact-img ">
-            <img src="img/app-screenshots/2-01.svg" alt="fun facts">
-          </div>
-        </div>
-        <div class="col-lg-6 ">
-          <div class="section-title">
-            <h2>fun <span>facts</span></h2>
-          </div>
-          <div class="fun-facts-text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. </p>
-            <div class="row ">
-              <div class="col-sm-6 scroll-top">
-                <div class="fun-fact-item style-1">
-                  <h3>36</h3>
-                  <span>Number of test samples</span>
-                </div>
-              </div>
-              <div class="col-sm-6 scroll-top">
-                <div class="fun-fact-item style-2">
-                  <h3>34</h3>
-                  <span>Number of training samples</span>
-                </div>
-              </div>
-              <div class="col-sm-12 scroll-bottom">
-                <div class="fun-fact-item style-3">
-                  <h3>70</h3>
-                  <span>Total Number of Samples</span>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Fun fact section end-->
-
-  <!-- User's guide section start -->
-  
-  <section class="app-screenshots section-padding" id="guide" data-scroll-index="2">
-    <div class="container">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-lg-8">
-          <div class="section-title section-title-user-guide">
-            <h2>Your <span>Guide</span></h2>
-          </div>
-        </div>
-      </div>
-      <div class="row  justify-content-center align-items-center">
-        <div class="owl-carousel screeshots-carousel scroll-bottom">
-          <div class="screeshot-item ">
-            
-            <img src="img/app-screenshots/15-01.svg" alt="step 1">
-            <h3>Load Data</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-              et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-            
-          </div>
-          <div class="screeshot-item">
-            
-            <img src="img/app-screenshots/2-01.svg" alt="step 2">
-            <h3>Tracking & Detection</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-          </div>
-          <div class="screeshot-item">
-            
-            <img src="img/app-screenshots/15-01.svg" alt="step 3">
-            <h3>Analysis & Statistics</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- User's guide section start -->
-  
-  <!-- How it works section start -->
-  <section class="how-it-works section-padding">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="section-title">
-            <h2>how it <span>works</span></h2>
-          </div>
-        </div>
-      </div>
-      <div class="row scroll-flip">
-        <div class="col-lg-3 col-md-6 ">
-          <div class="how-it-works-item line-right">
-            <div class="step">1</div>
-            <h3>download</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="how-it-works-item line-right">
-            <div class="step">2</div>
-            <h3>Install packages</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="how-it-works-item line-right">
-            <div class="step">3</div>
-            <h3>Load your data</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor </p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="how-it-works-item ">
-            <div class="step">4</div>
-            <h3>Track & Analyse</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- How it works section end -->
-
-  <!--How to install start -->
-  <section class="faq section-padding" id="install" data-scroll-index="3">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="section-title">
-            <h2>Installation <span>Guide</span></h2>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <div id="accordion">
-            <div class="accordion-item scroll-bottom">
-              <div class="accordion-header" data-toggle="collapse" 
-              data-target="#collapse-01">
-                <h3>Python Installation</h3>
-              </div>
-              <div class="collapse show" id="collapse-01" data-parent="#accordion">
-                <div class="accordion-body">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                  sed do eiusmod tempor. Lorem ipsum dolor sit amet, 
-                  consectetur adipiscing elit, sed do eiusmod tempor</p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item scroll-bottom">
-              <div class="accordion-header collapsed" data-toggle="collapse" 
-              data-target="#collapse-02">
-                <h3>TensorFlow Installation</h3>
-              </div>
-              <div class="collapse " id="collapse-02" data-parent="#accordion">
-                <div class="accordion-body">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                  sed do eiusmod tempor. Lorem ipsum dolor sit amet, 
-                  consectetur adipiscing elit, sed do eiusmod tempor</p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item scroll-bottom">
-              <div class="accordion-header collapsed" data-toggle="collapse" 
-              data-target="#collapse-03">
-                <h3>Python Installation</h3>
-              </div>
-              <div class="collapse " id="collapse-03" data-parent="#accordion">
-                <div class="accordion-body">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                  sed do eiusmod tempor. Lorem ipsum dolor sit amet, 
-                  consectetur adipiscing elit, sed do eiusmod tempor</p>
-                </div>
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-lg-6" id="welcome-text">
+            <div class="home-text">
+              <h1>Best Abnormal Crowd Activities Behavior App</h1>
+              <p>
+                It's a convolutional autoencoder based on optical flow to detect
+                and track abnormal crowd activities Test on UCSD dataset
+              </p>
+              <div class="home-btn">
+                <a href="" class="btn btn-1">Test Our system</a>
+                <button type="button" class="btn btn-1 video-play-btn">
+                  <i class="fas fa-play"></i>
+                </button>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--How to install end -->
-
-  <!-- files architecture section start-->
-  <section data-scroll-index="4" id="architecture"></section>
-  <!-- files architecture section end -->
-
-  
-  <!--Contact section start-->
-  <section class="contact section-padding" id="contact" data-scroll-index="5">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="section-title">
-            <h2>Get In <span>Touch</span></h2>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-5 ">
-          <div class="contact-info scroll-left">
-            <h3>For Any Queries and Feedback</h3>
-            <div class="contact-info-item">
-              <i class="fas fa-location-arrow"></i>
-              <h4>Company Location</h4>
-              <p>address</p>
-            </div>
-            <div class="contact-info-item">
-              <i class="fas fa-envelope"></i>
-              <h4>Write to us at</h4>
-              <p>email@gmail.com</p>
-            </div>
-            <div class="contact-info-item">
-              <i class="fas fa-phone"></i>
-              <h4>Call us on</h4>
-              <p>+213 ..</p>
+          <div class="col-lg-6 text-center" id="welcome-img">
+            <div class="home-img">
+              <div class="circle"></div>
+              <img src="img/app-screenshots/15-01.svg" alt="eyesee app" />
             </div>
           </div>
         </div>
-        <div class="col-lg-8 col-md-7">
-          <div class="contact-form">
-            <form id="myForm">
+      </div>
+    </section>
+    <!-- Home Section End-->
+
+    <!-- Feature Section Start -->
+    <section
+      class="features section-padding"
+      id="features"
+      data-scroll-index="1"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-title">
+              <h2>Awesome <span>features</span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="owl-carousel features-carousel scroll-bottom">
+            <div class="feature-item">
+              <div class="icon">
+                <i class="fas fa-diagnoses"></i>
+              </div>
+              <h3>Tracking pedestrians</h3>
+              <p>
+                To perform tracking and crow counting, the system uses yolov5
+                library and MOT16
+              </p>
+            </div>
+
+            <div class="feature-item">
+              <div class="icon">
+                <i class="fas fa-chart-bar"></i>
+              </div>
+              <h3>Statistics</h3>
+              <p>
+                The desktop version provides interactive and informative graphs
+                (ROC curves, crowd counting, detected pedestrian numbers, …)
+                Using modern chart.js framework
+              </p>
+            </div>
+            <div class="feature-item">
+              <div class="icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <h3>Fast load app</h3>
+              <p>
+                The backend algorithms are optimized for the ucsd pedestrians
+                dataset using tensorflow and pytorch to perform tracking,
+                detection and classification
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Feature Section End -->
+
+    <!-- Fun fact section start-->
+    <section class="fun-facts section-padding">
+      <div class="container">
+        <div class="row">
+          <div
+            class="
+              col-lg-6
+              d-flex
+              align-items-center
+              justify-content-center
+              scroll-left
+            "
+          >
+            <div class="fun-fact-img">
+              <img src="img/app-screenshots/2-01.svg" alt="fun facts" />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="section-title">
+              <h2>fun <span>facts</span></h2>
+            </div>
+            <div class="fun-facts-text">
               <div class="row">
-                <div class="col-lg-6 scroll-top">
-                  <div class="form-group">
-                    <input type="text" name="name" placeholder="Your Name" class="form-control">
+                <div class="col-sm-6 scroll-top">
+                  <div class="fun-fact-item style-1">
+                    <span
+                      >By the end of 2021 6% of overall jobs will be killed, I
+                      think we owe the San Diego garden agent an excuse !
+                    </span>
                   </div>
                 </div>
-                <div class="col-lg-6 scroll-top">
-                  <div class="form-group">
-                    <input type="text" name="email" placeholder="Your Email" class="form-control">
+                <div class="col-sm-6 scroll-top">
+                  <div class="fun-fact-item style-2">
+                    <span
+                      >The background subtraction script can be used to
+                      transform your images into transparent background png
+                      images</span
+                    >
+                  </div>
+                </div>
+                <div class="col-sm-12 scroll-bottom">
+                  <div class="fun-fact-item style-3">
+                    <span
+                      >If you want to go undetected even by the most powerful AI
+                      surveillance systems stay close to tree areas and shadows,
+                      don’t get into trouble though</span
+                    >
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Fun fact section end-->
+
+    <!-- User's guide section start -->
+
+    <section
+      class="app-screenshots section-padding"
+      id="guide"
+      data-scroll-index="2"
+    >
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-8">
+            <div class="section-title section-title-user-guide">
+              <h2>Your <span>Guide</span></h2>
+              <h5>Using the JavaFX frontend :</h5>
+              <h6>Open the project in VScode or Intellij</h6>
+              <h6>Compile and run the main application</h6>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+          <div class="owl-carousel screeshots-carousel scroll-bottom">
+            <div class="screeshot-item">
+              <img src="img/trackking.PNG" alt="step 1" />
+              <h3>Tracking</h3>
+              <p></p>
+            </div>
+            <div class="screeshot-item">
+              <img src="img/abnormal_mask.PNG" alt="step 2" />
+              <h3>Abnormal Behavior Detection</h3>
+              <p></p>
+            </div>
+            <div class="screeshot-item">
+              <img src="img/dataset.PNG" alt="step 3" />
+              <h3>Dataset</h3>
+              <p></p>
+            </div>
+            <div class="screeshot-item">
+              <img src="img/dataset_conf.PNG" alt="step 3" />
+              <h3>Dataset Configuration</h3>
+              <p></p>
+            </div>
+            <div class="screeshot-item">
+              <img src="img/help.PNG" alt="step 3" />
+              <h3>Help</h3>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- User's guide section start -->
+
+    <!-- How it works section start -->
+    <section class="how-it-works section-padding">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-title">
+              <h2>how it <span>works</span></h2>
+              <h5>Using backend only</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="row scroll-flip">
+          <div class="col-lg-3 col-md-6">
+            <div class="how-it-works-item line-right">
+              <div class="step">1</div>
+              <h3>Github</h3>
+              <p>Go to the team’s github repository</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="how-it-works-item line-right">
+              <div class="step">2</div>
+              <h3>Download</h3>
+              <p>Clone the repository</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="how-it-works-item line-right">
+              <div class="step">3</div>
+              <h3>Navigate</h3>
+              <p>Navigate to “backend” folder</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="how-it-works-item">
+              <div class="step">4</div>
+              <h3>Track & Analyse</h3>
+              <p>Execute the run.py script (Preferably using)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="front-end">
+          <h5>Using the JavaFX frontend</h5>
+
+        </div> -->
+      </div>
+    </section>
+    <!-- How it works section end -->
+
+    <!--How to install start -->
+    <section class="faq section-padding" id="install" data-scroll-index="3">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-title">
+              <h2>Installation <span>Guide</span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div id="accordion">
+              <div class="accordion-item scroll-bottom">
+                <div
+                  class="accordion-header"
+                  data-toggle="collapse"
+                  data-target="#collapse-01"
+                >
+                  <h3>Python Installation</h3>
+                </div>
+                <div
+                  class="collapse show"
+                  id="collapse-01"
+                  data-parent="#accordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Install python packages (conda recommended)
+                      <br /><br />
+                      &emsp; pip install -r requirements.txt
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item scroll-bottom">
+                <div
+                  class="accordion-header collapsed"
+                  data-toggle="collapse"
+                  data-target="#collapse-02"
+                >
+                  <h3>Running the scripts</h3>
+                </div>
+                <div class="collapse" id="collapse-02" data-parent="#accordion">
+                  <div class="accordion-body">
+                    <p>
+                      Run the main script with arguments
+                      <br /><br />
+                      &emsp; python run.py -test [number of tests]
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item scroll-bottom">
+                <div
+                  class="accordion-header collapsed"
+                  data-toggle="collapse"
+                  data-target="#collapse-03"
+                >
+                  <h3>Additional Information</h3>
+                </div>
+                <div class="collapse" id="collapse-03" data-parent="#accordion">
+                  <div class="accordion-body">
+                    <p>
+                      You can use both the other backend scripts or the GUI to
+                      check the results
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--How to install end -->
+
+    <!-- files architecture section start-->
+    <section
+      class="files section-padding"
+      data-scroll-index="4"
+      id="architecture"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="section-title">
+            <h2>Concept <span>Map</span></h2>
+          </div>
+          <img
+            class="scroll-left"
+            src="./img/Nervous system concept map example.png"
+            alt="files-architecture"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- files architecture section end -->
+
+    <!--Contact section start-->
+    <section class="contact section-padding" id="contact" data-scroll-index="5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-title">
+              <h2>Get In <span>Touch</span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-5">
+            <div class="contact-info scroll-left">
+              <h3>For Any Queries and Feedback</h3>
+              <div class="contact-info-item">
+                <i class="fas fa-location-arrow"></i>
+                <h4>Company Location</h4>
+                <p>address</p>
+              </div>
+              <div class="contact-info-item">
+                <i class="fas fa-envelope"></i>
+                <h4>Write to us at</h4>
+                <p>email@gmail.com</p>
+              </div>
+              <div class="contact-info-item">
+                <i class="fas fa-phone"></i>
+                <h4>Call us on</h4>
+                <p>+213 ..</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-7">
+            <div class="contact-form">
+              <form id="myForm">
+                <div class="row">
+                  <div class="col-lg-6 scroll-top">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-6 scroll-top">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        name="email"
+                        placeholder="Your Email"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12 scroll-top">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        name="phone"
+                        placeholder="Your Phone"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12 scroll-top">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        name="subject"
+                        placeholder="Subject"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12 scroll-top">
+                    <div class="form-group">
+                      <textarea
+                        type="text"
+                        name="message"
+                        placeholder="Your Message"
+                        class="form-control"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+              </form>
               <div class="row">
                 <div class="col-lg-12 scroll-top">
-                  <div class="form-group">
-                    <input type="text" name="phone" placeholder="Your Phone" class="form-control">
-                  </div>
+                  <button onclick="SubForm()" class="btn-2">
+                    Send Message
+                  </button>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-12 scroll-top">
-                  <div class="form-group">
-                    <input type="text" name="subject" placeholder="Subject" class="form-control">
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-12 scroll-top">
-                  <div class="form-group">
-                    <textarea type="text" name="message" placeholder="Your Message" class="form-control"></textarea>
-                  </div>
-                </div>
-              </div>
-              
-            </form>
-            <div class="row">
-              <div class="col-lg-12 scroll-top">
-                <button  onclick="SubForm()" class=" btn-2">Send Message</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!--Contact section end-->
+    </section>
+    <!--Contact section end-->
 
-  <!-- Foooter section start -->
-  <footer class="footer">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <div class="footer-col">
-            <h3>About Us</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+    <!-- Foooter section start -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="footer-col">
+              <h3>About Us</h3>
+              <p>
+                © Copyright CERIST. All Rights Reserved<br />
+                Designed by Name of my team
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="footer-col">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#guide">Guide</a></li>
+                <li><a href="#install">Installation</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="footer-col">
-            <h3>Quick Links</h3>
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#features">Features</a></li>
-              <li><a href="#guide">Guide</a></li>
-              <li><a href="#install">Installation</a></li>
-              <li><a href="#architecture">Architecture</a></li>
-            </ul>
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="copyright-text">&copy;2021@ EyeSee</p>
           </div>
         </div>
-        
       </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <p class="copyright-text">&copy;2021@ EyeSee</p>
+    </footer>
+    <!-- Foooter section end -->
+
+    <!-- Toggle theme start - light and dark mode -->
+    <div class="toggle-theme">
+      <i class="fas fa-moon"></i>
+    </div>
+    <!-- Toggle theme end - light and dark mode -->
+
+    <!-- video popup start -->
+    <div class="video-popup">
+      <div class="video-popup-inner">
+        <i class="fas fa-times video-popup-close"></i>
+        <div class="iframe-box">
+          <iframe
+            id="player-1"
+            src="https://www.youtube.com/embed/nuhBnlHKAK0"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     </div>
-  </footer>
-  <!-- Foooter section end -->
+    <!-- video popup end -->
 
-  <!-- Toggle theme start - light and dark mode -->
-  <div class="toggle-theme">
-    <i class="fas fa-moon"></i>
-  </div>
-  <!-- Toggle theme end - light and dark mode -->
-
-  <!-- video popup start -->
-  <div class="video-popup">
-    <div class="video-popup-inner">
-      <i class="fas fa-times video-popup-close"></i>
-      <div class="iframe-box">
-        <iframe id="player-1" src="https://www.youtube.com/embed/nuhBnlHKAK0" title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-  <!-- video popup end -->
-
-  
-  <!-- jquery js -->
-  <script src="js/jquery.min.js"></script>
-  <!-- popper js -->
-  <script src="js/popper.min.js"></script>
-  <!-- bootstrap js -->
-  <script src="js/bootstrap.min.js"></script>
-  <!-- owl carousel js -->
-  <script src="js/owl.carousel.min.js"></script>
-  <!-- ScrollIt js -->
-  <script src="js/scrollIt.min.js"></script>
-  <!-- main js -->
-  <script src="js/main.js"></script>
-</body>
-
+    <!-- jquery js -->
+    <script src="js/jquery.min.js"></script>
+    <!-- popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- owl carousel js -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- ScrollIt js -->
+    <script src="js/scrollIt.min.js"></script>
+    <!-- main js -->
+    <script src="js/main.js"></script>
+  </body>
 </html>

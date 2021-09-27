@@ -7,10 +7,10 @@
 
 /* Global css */
 :root{
-    --main-color: #6495ED;
+    --main-color: #0083ff;
     --color-1:#ED6A5A;
     --color-2:#FDCA40;
-    --color-3:#17e9e1;
+    --color-3:#17e8e1;
     --bg-dark:#17224d;
     --main-to-dark-color: var(--main-color);
     --dark-to-main-color: var(--bg-dark);
@@ -252,6 +252,8 @@ ul {
     animation: bounceTop_01 3s linear infinite;
 }
 
+
+
 .owl-carousel .owl-dots {
     padding: 0 15px;
     text-align: center;
@@ -322,7 +324,11 @@ ul {
 }
 
 
-
+.section-title h5{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 1rem;
+}
 
 
 
@@ -580,9 +586,11 @@ ul {
     padding: 30px;
     border-bottom: 10px;
     text-align: center;
-    position: relative;
     z-index: 1;
+    height: 100%;
     overflow: hidden;
+    position: relative;
+    
 }
 
 .features .feature-item::after,
@@ -684,6 +692,7 @@ ul {
 
 /** Fun Facts Section ***/
 
+
 .fun-facts {
     background-color: var(--black-100);
     
@@ -734,7 +743,6 @@ ul {
 
 .fun-fact-item span {
     font-size: 15px;
-    text-transform: uppercase;
     font-weight: 400;
     margin: 0;
     line-height: 26px;
@@ -756,6 +764,10 @@ ul {
 
 
 /* user's guide */
+
+h6 {
+    text-align: center;
+}
 
 .screeshot-item {
     margin: 15px;
@@ -799,11 +811,20 @@ ul {
     margin-bottom: 20px;
 }
 
+.screeshots-carousel h3 {
+    margin-top: 2rem;
+}
+
+
+
 
 /* how it works section */
 .how-it-works{
     background-color: var(--black-100);
 }
+
+
+
 .how-it-works-item {
     padding: 30px;
     text-align: center;
@@ -847,11 +868,12 @@ ul {
 
 .how-it-works-item p {
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
     margin: 0;
     color: var(--black-400);
     line-height: 26px;
 }
+
 
 /* installation section */
 
@@ -911,7 +933,7 @@ ul {
 }
 
 .faq .accordion-body p {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 16px;
     color: var(--black-400);
     line-height: 26px;
@@ -922,7 +944,7 @@ ul {
 /* Contact section */
 
 .contact {
-    background-color: var(--black-100);
+    background-color: white;
 }
 
 .contact-info h3 {
@@ -1073,6 +1095,8 @@ ul {
 
 
 /* Responsive */
+
+
 @media(max-width: 991px){
     .navbar-toggler{
         background-color: var(--dark-to-main-color);
@@ -1134,6 +1158,8 @@ ul {
 }
 
 @media(max-width: 767px){
+    
+
     .navbar .navbar-brand{
         font-size: 25px;
     }
@@ -1157,6 +1183,7 @@ ul {
 }
 
 @media(max-width: 575px){
+   
     .home-text h1{
         font-size: 30px;
     }
@@ -1223,4 +1250,12 @@ ul {
         width: 20px;
         transform-origin: 84px 84px;
     }
+}
+
+/* files */
+.files {
+    background-color: var(--black-100);
+}
+.files .section-title {
+    margin-bottom: 2rem ;
 }
