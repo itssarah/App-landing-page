@@ -900,7 +900,7 @@ h6 {
 /* Contact section */
 
 .contact {
-  background-color: white;
+  background-color: var(--black-100);
 }
 
 .contact-info h3 {
